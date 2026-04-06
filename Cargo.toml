@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 description = "Simple UPnP MediaServer implementation for the rtbit BitTorrent client"
 license = "MIT"
-repository = "https://github.com/AusAgentSmith-org/librtbit-upnp-serve"
+repository = "http://100.92.54.45:3002/indexarr/librtbit-upnp-serve"
 
 [dependencies]
 anyhow = "1"
@@ -17,9 +17,9 @@ serde_derive = "1"
 http = "1"
 httparse = "1"
 uuid = { version = "1", features = ["v4"] }
-librtbit-upnp = { git = "https://github.com/AusAgentSmith-org/librtbit-upnp.git", tag = "v0.1.0" }
+librtbit-upnp = { git = "http://100.92.54.45:3002/indexarr/librtbit-upnp.git", tag = "v0.1.0" }
 gethostname = "1"
-librtbit-core = { git = "https://github.com/AusAgentSmith-org/librtbit-core.git", tag = "v0.1.0" }
+librtbit-core = { git = "http://100.92.54.45:3002/indexarr/librtbit-core.git", tag = "v0.1.0" }
 mime_guess = { version = "2", default-features = false }
 url = { version = "2", default-features = false }
 parking_lot = "0.12"
