@@ -1,0 +1,45 @@
+[package]
+name = "librtbit-upnp-serve"
+version = "0.1.0"
+edition = "2024"
+description = "Simple UPnP MediaServer implementation for the rtbit BitTorrent client"
+license = "MIT"
+repository = "https://github.com/AusAgentSmith-org/librtbit-upnp-serve"
+
+[dependencies]
+anyhow = "1"
+axum = { version = "0.8", features = ["tokio"] }
+tokio = { version = "1", features = ["full"] }
+tracing = "0.1"
+bstr = "1"
+serde = "1"
+serde_derive = "1"
+http = "1"
+httparse = "1"
+uuid = { version = "1", features = ["v4"] }
+librtbit-upnp = { git = "https://github.com/AusAgentSmith-org/librtbit-upnp.git", tag = "v0.1.0" }
+gethostname = "1"
+librtbit-core = { git = "https://github.com/AusAgentSmith-org/librtbit-core.git", tag = "v0.1.0" }
+mime_guess = { version = "2", default-features = false }
+url = { version = "2", default-features = false }
+parking_lot = "0.12"
+tokio-util = "0.7"
+reqwest = { version = "0.12", default-features = false }
+quick-xml = { version = "0.38", features = ["serialize"] }
+network-interface = "2"
+futures = "0.3"
+librqbit-dualstack-sockets = "0.7"
+rand = "0.9"
+
+[dev-dependencies]
+tracing-subscriber = { version = "0.3", default-features = false }
+tower-http = { version = "0.6", features = ["trace"] }
+
+[[example]]
+name = "upnp-stub-server"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+
+[lints.rust]
+unused = "warn"
